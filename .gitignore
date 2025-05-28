@@ -1,3 +1,7 @@
 __pycache__
 coco2017
 extracted_dataset
+.qlty
+.ruff_cache
+runs
+*.pt

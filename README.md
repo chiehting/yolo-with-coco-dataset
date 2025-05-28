@@ -85,7 +85,7 @@ extracted_dataset/
 4. 執行腳本：
 
    ```bash
-   python coco_to_yolo.py
+   python convert_to_yolo11.py
    ```
 
 ## 轉換格式說明
@@ -96,7 +96,7 @@ COCO 格式的標註：
 [x, y, width, height]  # 左上角座標及寬高
 ```
 
-YOLO 格式的標註：
+YOLO 11 格式的標註：
 
 ```txt
 <class_id> <x_center> <y_center> <width> <height>  # 中心點座標及寬高，所有值歸一化至 0-1

@@ -24,8 +24,8 @@ nms = set([cat['supercategory'] for cat in cats])
 print('COCO supercategories: \n{}'.format(' '.join(nms)))
 
 # get all images containing given categories, select one at random
-catIds = coco.getCatIds(catNms=['person','dog','skateboard']);
-imgIds = coco.getImgIds(catIds=catIds );
+catIds = coco.getCatIds(catNms=['person','dog','skateboard'])
+imgIds = coco.getImgIds(catIds=catIds )
 imgIds = coco.getImgIds(imgIds = [324158])
 img = coco.loadImgs(imgIds[np.random.randint(0,len(imgIds))])[0]
 
@@ -62,7 +62,7 @@ plt.show()
 annFile = '{}/annotations/captions_{}.json'.format(dataDir,dataType)
 coco_caps=COCO(annFile)
 # load and display caption annotations
-annIds = coco_caps.getAnnIds(imgIds=img['id']);
+annIds = coco_caps.getAnnIds(imgIds=img['id'])
 anns = coco_caps.loadAnns(annIds)
 coco_caps.showAnns(anns)
 plt.imshow(I); plt.axis('off'); plt.show()
